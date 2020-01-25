@@ -11,7 +11,7 @@ addEventListener('fetch', event => {
 async function handleRequest(request) {
     const r = new Router()
     for (const path in Routes) {
-        r.get(`/${path}`, () => {
+        r.get(`/${path}`.toLowerCase(), () => {
             console.log('ok');
             return Response.redirect(Routes[path], 301)
         });

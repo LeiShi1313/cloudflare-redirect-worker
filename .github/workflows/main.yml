@@ -13,10 +13,5 @@ jobs:
       - uses: actions/checkout@master
       - name: Publish
         uses: cloudflare/wrangler-action@1.1.0
-        env:
-          CLOUDFLARE_AUTH_EMAIL: ${{ secrets.CF_AUTH_EMAIL }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          CLOUDFLARE_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
-          CLOUDFLARE_SCRIPT_NAME: ${{ secrets.CF_SCRIPT_NAME }}
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}

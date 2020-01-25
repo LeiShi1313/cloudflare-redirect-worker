@@ -12,8 +12,9 @@ async function handleRequest(request) {
     const r = new Router()
     for (const path in Routes) {
         r.get(`/${path}`.toLowerCase(), () => {
-            console.log('ok');
-            return Response.redirect(Routes[path], 301)
+            url = request.url.split('?');
+            url[0] = Routes[path];
+            return Response.redirect(url.join('?'), 301)
         });
     }
 

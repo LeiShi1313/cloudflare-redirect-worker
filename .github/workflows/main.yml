@@ -1,0 +1,12 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: GitHub Action for Cloudflare Workers
+      uses: cloudflare/serverless-action@v1.1
+      run: wrangler build

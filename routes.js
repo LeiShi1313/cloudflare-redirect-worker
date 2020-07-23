@@ -11,8 +11,7 @@ const Routes = {
     'ac-qr': 'https://acpatterns.com/editor',
     'ac-turnip': 'https://elxris.github.io/Turnip-Calculator/',
     'ssrcloud': 'https://ntt-co-jp.club/auth/register?code=AFHj',
-    '别用戈尔巴乔夫的': 'https://ntt-co-jp.club/auth/register?code=AFHj',
-    '薯条': 'https://ntt-co-jp.club/auth/register?code=AFHj'
+    'AFHj': 'https://ntt-co-jp.club/auth/register?code=AFHj'
 }
 
 module.exports = Routes;

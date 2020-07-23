@@ -9,7 +9,10 @@ const Routes = {
     'how-to-ask': 'https://stackoverflow.com/help/how-to-ask',
     'ac-island': 'https://eugeneration.github.io/HappyIslandDesigner/',
     'ac-qr': 'https://acpatterns.com/editor',
-    'ac-turnip': 'https://elxris.github.io/Turnip-Calculator/'
+    'ac-turnip': 'https://elxris.github.io/Turnip-Calculator/',
+    'ssrcloud': 'https://www.clashcloud.net/auth/register?code=AFHj',
+    '别用戈尔巴乔夫的': 'https://www.clashcloud.net/auth/register?code=AFHj',
+    '薯条': 'https://www.clashcloud.net/auth/register?code=AFHj'
 }
 
 module.exports = Routes;

@@ -12,7 +12,7 @@ const Routes = {
     'ac-turnip': 'https://elxris.github.io/Turnip-Calculator/',
     'ssrcloud': 'https://邀请01.很有精神.com/auth/register?code=OfvL',
     'cnix': 'https://邀请01.很有精神.com/auth/register?code=OfvL',
-    'bt': 'https://leishi.io/blog/posts/2021-09/Making-A-Downloader-Traffic-Panel-On-Synology-Using-Grafana-And-Promethus/'
+    'pt': 'https://leishi.io/blog/posts/2021-09/Making-A-Downloader-Traffic-Panel-On-Synology-Using-Grafana-And-Promethus/'
 }
 
 module.exports = Routes;

@@ -4,3 +4,6 @@ account_id = "f46bca2c39a20923c8a166a3529d9baf"
 workers_dev = true
 route = ""
 zone_id = "1e5f91f0100d0053427fc79abdb5b1c0"
+kv_namespaces = [
+    { binding = "DFT", preview_id = "4ae1a636dc3147f5b2b63820b19cac48", id = "e60692d073b0422498c088b81316c257" }
+]

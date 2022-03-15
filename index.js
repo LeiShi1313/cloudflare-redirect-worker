@@ -73,7 +73,7 @@ async function handleRequest(event) {
         const dftUrl = await DFT.get(key)
         try {
             let _ = new URL(dftUrl)
-            return Response.redirect(dftUrl, 302)
+            return Response.redirect(dftUrl, 307)
         } catch (_) {
             return new Response("URL not found!", { status: 404} )
         }
@@ -82,7 +82,7 @@ async function handleRequest(event) {
         r.get(`/${path}`.toLowerCase(), () => {
             url = event.request.url.split('?');
             url[0] = Routes[path];
-            return Response.redirect(url.join('?'), 301)
+            return Response.redirect(url.join('?'), 307)
         });
     }
 

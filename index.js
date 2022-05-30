@@ -78,6 +78,11 @@ async function handleRequest(event) {
             return new Response("URL not found!", { status: 404} )
         }
     })
+    r.get('/mx/(?<mxid>@.+:.+)', async () => {
+        const url = new URL(event.request.url)
+        const mx_id = url.pathname.match('/mx/(?<mxid>@.+:.+)')[1]
+        return Response.redirect(`https://matrix.to/#/${mx_id}`, 301)
+    })
     for (const path in Routes) {
         r.get(`/${path}`.toLowerCase(), () => {
             url = event.request.url.split('?');

@@ -15,6 +15,7 @@ const Routes = {
     'pt': 'https://leishi.io/blog/posts/2021-09/Making-A-Downloader-Traffic-Panel-On-Synology-Using-Grafana-And-Promethus/',
     'dft': 'https://leishi.io/blog/posts/2021-12/Differential/',
     'nas': 'https://leishi.io/blog/posts/2021-12/home-nas-media-center/',
+    'genshin': 'https://genshin-aritifact-analyzer.leishi.io/',
 }
 
 module.exports = Routes;

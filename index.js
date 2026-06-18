@@ -1,5 +1,6 @@
 const Router = require('./router')
 const Routes = require('./routes')
+const { handleTorrentDownload, handleTorrentUpload } = require('./torrent')
 
 const readRequestBody = async (request) => {
     const { headers } = request
@@ -82,6 +83,21 @@ async function handleRequest(event) {
         const url = new URL(event.request.url)
         const mx_id = url.pathname.match('/mx/(?<mxid>@.+:.+)')[1]
         return Response.redirect(`https://matrix.to/#/${mx_id}`, 301)
+    })
+    r.post('/torrent', async () =>
+        handleTorrentUpload(event.request, {
+            bucket: TORRENTS,
+            rateLimitStore: DFT,
+        })
+    )
+    r.get('/torrent/(?<hash>[0-9a-fA-F]{40})\\.torrent', async () => {
+        const url = new URL(event.request.url)
+        const hash = url.pathname.match(
+            '/torrent/(?<hash>[0-9a-fA-F]{40})\\.torrent'
+        )[1]
+        return handleTorrentDownload(hash, {
+            bucket: TORRENTS,
+        })
     })
     for (const path in Routes) {
         r.get(`/${path}`.toLowerCase(), () => {

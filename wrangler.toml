@@ -7,3 +7,8 @@ zone_id = "1e5f91f0100d0053427fc79abdb5b1c0"
 kv_namespaces = [
     { binding = "DFT", preview_id = "4ae1a636dc3147f5b2b63820b19cac48", id = "e60692d073b0422498c088b81316c257" }
 ]
+
+[[r2_buckets]]
+binding = "TORRENTS"
+bucket_name = "cloudflare-redirect-worker-torrents"
+preview_bucket_name = "cloudflare-redirect-worker-torrents-preview"

@@ -4,6 +4,16 @@ Selects the logic to respond to requests based on the `request` method and URL. 
 
 [`index.js`](https://github.com/cloudflare/worker-template-router/blob/master/router.js) is the content of the Workers script.
 
+#### Torrent uploads
+
+Upload a torrent file as raw bytes:
+
+```
+curl --data-binary @file.torrent https://example.com/torrent
+```
+
+The response includes an info-hash ID and a fetchable URL such as `/torrent/<infoHash>.torrent`. Uploaded torrents are stored in the `TORRENTS` R2 bucket binding. Configure the R2 bucket lifecycle to delete objects under `torrents/` after 30 days.
+
 Live Demos are hosted on `workers-tooling.cf/demos/router`:
 [Demo /bar](http://workers-tooling.cf/demos/router/bar) | [Demo /foo](http://workers-tooling.cf/demos/router/foo)
 
